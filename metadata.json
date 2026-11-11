@@ -1,0 +1,11 @@
+{
+  "name": "Suthra Punjab – Field Evidence Prototype",
+  "description": "Interactive operational prototype by SK Developers demonstrating mobile field-visit geofence evidence capture, modern Google Maps Routes & RouteMatrix integration, watermarked Before/After verification, and supervisor approval workflows.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
