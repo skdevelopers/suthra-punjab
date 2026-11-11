@@ -1,8 +1,11 @@
-# Static, read-only executive demo. Build with a restricted browser Maps key.
+# Static executive demo. Existing bun.lock v2 is newer than Bun 1.3.2 supports.
+# Temporary compatibility build: resolve dependencies from package.json.
+# TODO: regenerate and commit a compatible lockfile using a pinned Bun version,
+# then restore frozen-lockfile installation for reproducible releases.
 FROM oven/bun:1.3.2-alpine AS build
 WORKDIR /app
-COPY package.json bun.lock ./
-RUN bun install --frozen-lockfile
+COPY package.json ./
+RUN bun install --no-save
 COPY . .
 ARG VITE_GOOGLE_MAPS_API_KEY=""
 ENV VITE_GOOGLE_MAPS_API_KEY=${VITE_GOOGLE_MAPS_API_KEY}
