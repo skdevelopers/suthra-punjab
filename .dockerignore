@@ -1,0 +1,11 @@
+node_modules
+dist
+build
+.git
+.github
+.env
+.env.*
+!.env.example
+*.log
+coverage
+.gmp_cache
